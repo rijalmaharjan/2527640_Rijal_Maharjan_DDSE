@@ -6,7 +6,8 @@ namespace ElevatorApp
     public partial class MainForm : Form
     {
         private Elevator elevator = new Elevator();
-        private IElevatorLogger logger = new InMemoryElevatorLogger();
+        string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=ElevatorDB.accdb;";
+        private IElevatorLogger logger;
 
         // Y positions of the elevator panel inside the shaft
         private const int Floor1Y = 20;
@@ -16,6 +17,7 @@ namespace ElevatorApp
         public MainForm()
         {
             InitializeComponent();
+            logger = new AccessElevatorLogger(connectionString);
 
             // delegates / events from the elevator
             elevator.PositionChanged += ElevatorPositionChanged;

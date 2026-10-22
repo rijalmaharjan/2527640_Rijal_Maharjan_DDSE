@@ -9,4 +9,14 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.Data.OleDb" Version="10.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="ElevatorDB.accdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
