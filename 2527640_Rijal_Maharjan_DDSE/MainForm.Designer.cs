@@ -33,6 +33,7 @@ namespace ElevatorApp
             lblFloor1 = new Label();
             lblFloor0 = new Label();
             btnLog = new Button();
+            lblTitle = new Label();
             grpControlPanel.SuspendLayout();
             pnlShaft.SuspendLayout();
             pnlCar.SuspendLayout();
@@ -40,10 +41,12 @@ namespace ElevatorApp
             // 
             // grpControlPanel
             // 
+            grpControlPanel.BackColor = Color.LightSteelBlue;
             grpControlPanel.Controls.Add(lblDisplay);
             grpControlPanel.Controls.Add(lblDoorStatus);
             grpControlPanel.Controls.Add(btnPanel1);
             grpControlPanel.Controls.Add(btnPanel0);
+            grpControlPanel.ForeColor = Color.MidnightBlue;
             grpControlPanel.Location = new Point(20, 40);
             grpControlPanel.Name = "grpControlPanel";
             grpControlPanel.Size = new Size(130, 190);
@@ -53,8 +56,10 @@ namespace ElevatorApp
             // 
             // lblDisplay
             // 
+            lblDisplay.BackColor = Color.Black;
             lblDisplay.BorderStyle = BorderStyle.Fixed3D;
             lblDisplay.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            lblDisplay.ForeColor = Color.Lime;
             lblDisplay.Location = new Point(10, 23);
             lblDisplay.Name = "lblDisplay";
             lblDisplay.Size = new Size(108, 50);
@@ -73,26 +78,35 @@ namespace ElevatorApp
             // 
             // btnPanel1
             // 
+            btnPanel1.BackColor = Color.SteelBlue;
+            btnPanel1.FlatStyle = FlatStyle.Flat;
+            btnPanel1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnPanel1.ForeColor = Color.White;
             btnPanel1.Location = new Point(20, 110);
             btnPanel1.Name = "btnPanel1";
             btnPanel1.Size = new Size(90, 30);
             btnPanel1.TabIndex = 2;
             btnPanel1.Text = "Floor 1";
-            btnPanel1.UseVisualStyleBackColor = true;
+            btnPanel1.UseVisualStyleBackColor = false;
             btnPanel1.Click += btnPanel1_Click;
             // 
             // btnPanel0
             // 
+            btnPanel0.BackColor = Color.SteelBlue;
+            btnPanel0.FlatStyle = FlatStyle.Flat;
+            btnPanel0.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnPanel0.ForeColor = Color.White;
             btnPanel0.Location = new Point(20, 150);
             btnPanel0.Name = "btnPanel0";
             btnPanel0.Size = new Size(90, 30);
             btnPanel0.TabIndex = 3;
             btnPanel0.Text = "Floor 0";
-            btnPanel0.UseVisualStyleBackColor = true;
+            btnPanel0.UseVisualStyleBackColor = false;
             btnPanel0.Click += btnPanel0_Click;
             // 
             // pnlShaft
             // 
+            pnlShaft.BackColor = Color.Gainsboro;
             pnlShaft.BorderStyle = BorderStyle.FixedSingle;
             pnlShaft.Controls.Add(lblLine1);
             pnlShaft.Controls.Add(lblLine0);
@@ -104,7 +118,8 @@ namespace ElevatorApp
             // 
             // lblLine1
             // 
-            lblLine1.BorderStyle = BorderStyle.Fixed3D;
+            lblLine1.BackColor = Color.DimGray;
+            lblLine1.BorderStyle = BorderStyle.None;
             lblLine1.Location = new Point(0, 170);
             lblLine1.Name = "lblLine1";
             lblLine1.Size = new Size(198, 2);
@@ -112,7 +127,8 @@ namespace ElevatorApp
             // 
             // lblLine0
             // 
-            lblLine0.BorderStyle = BorderStyle.Fixed3D;
+            lblLine0.BackColor = Color.DimGray;
+            lblLine0.BorderStyle = BorderStyle.None;
             lblLine0.Location = new Point(0, 380);
             lblLine0.Name = "lblLine0";
             lblLine0.Size = new Size(198, 2);
@@ -120,6 +136,7 @@ namespace ElevatorApp
             // 
             // pnlCar
             // 
+            pnlCar.BackColor = Color.LightYellow;
             pnlCar.BorderStyle = BorderStyle.FixedSingle;
             pnlCar.Controls.Add(pnlDoorLeft);
             pnlCar.Controls.Add(pnlDoorRight);
@@ -130,6 +147,7 @@ namespace ElevatorApp
             // 
             // pnlDoorLeft
             // 
+            pnlDoorLeft.BackColor = Color.SteelBlue;
             pnlDoorLeft.BorderStyle = BorderStyle.FixedSingle;
             pnlDoorLeft.Location = new Point(5, 5);
             pnlDoorLeft.Name = "pnlDoorLeft";
@@ -138,6 +156,7 @@ namespace ElevatorApp
             // 
             // pnlDoorRight
             // 
+            pnlDoorRight.BackColor = Color.SteelBlue;
             pnlDoorRight.BorderStyle = BorderStyle.FixedSingle;
             pnlDoorRight.Location = new Point(60, 5);
             pnlDoorRight.Name = "pnlDoorRight";
@@ -146,27 +165,36 @@ namespace ElevatorApp
             // 
             // btnRequest1
             // 
+            btnRequest1.BackColor = Color.Orange;
+            btnRequest1.FlatStyle = FlatStyle.Flat;
+            btnRequest1.ForeColor = Color.Black;
             btnRequest1.Location = new Point(170, 115);
             btnRequest1.Name = "btnRequest1";
             btnRequest1.Size = new Size(110, 40);
             btnRequest1.TabIndex = 2;
             btnRequest1.Text = "Request Floor 1";
-            btnRequest1.UseVisualStyleBackColor = true;
+            btnRequest1.UseVisualStyleBackColor = false;
             btnRequest1.Click += btnRequest1_Click;
             // 
             // btnRequest0
             // 
+            btnRequest0.BackColor = Color.Orange;
+            btnRequest0.FlatStyle = FlatStyle.Flat;
+            btnRequest0.ForeColor = Color.Black;
             btnRequest0.Location = new Point(170, 325);
             btnRequest0.Name = "btnRequest0";
             btnRequest0.Size = new Size(110, 40);
             btnRequest0.TabIndex = 3;
             btnRequest0.Text = "Request Floor 0";
-            btnRequest0.UseVisualStyleBackColor = true;
+            btnRequest0.UseVisualStyleBackColor = false;
             btnRequest0.Click += btnRequest0_Click;
             // 
             // lblFloor1
             // 
+            lblFloor1.BackColor = Color.White;
             lblFloor1.BorderStyle = BorderStyle.FixedSingle;
+            lblFloor1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lblFloor1.ForeColor = Color.MidnightBlue;
             lblFloor1.Location = new Point(520, 115);
             lblFloor1.Name = "lblFloor1";
             lblFloor1.Size = new Size(220, 40);
@@ -176,7 +204,10 @@ namespace ElevatorApp
             // 
             // lblFloor0
             // 
+            lblFloor0.BackColor = Color.White;
             lblFloor0.BorderStyle = BorderStyle.FixedSingle;
+            lblFloor0.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lblFloor0.ForeColor = Color.MidnightBlue;
             lblFloor0.Location = new Point(520, 325);
             lblFloor0.Name = "lblFloor0";
             lblFloor0.Size = new Size(220, 40);
@@ -186,17 +217,33 @@ namespace ElevatorApp
             // 
             // btnLog
             // 
+            btnLog.BackColor = Color.SeaGreen;
+            btnLog.FlatStyle = FlatStyle.Flat;
+            btnLog.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnLog.ForeColor = Color.White;
             btnLog.Location = new Point(20, 250);
             btnLog.Name = "btnLog";
             btnLog.Size = new Size(130, 35);
             btnLog.TabIndex = 6;
             btnLog.Text = "Log";
-            btnLog.UseVisualStyleBackColor = true;
+            btnLog.UseVisualStyleBackColor = false;
             btnLog.Click += btnLog_Click;
+            // 
+            // lblTitle
+            // 
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            lblTitle.ForeColor = Color.MidnightBlue;
+            lblTitle.Location = new Point(20, 8);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(240, 25);
+            lblTitle.TabIndex = 7;
+            lblTitle.Text = "Elevator Control System";
             // 
             // MainForm
             // 
             AutoScaleMode = AutoScaleMode.None;
+            BackColor = Color.AliceBlue;
             ClientSize = new Size(760, 470);
             Controls.Add(btnLog);
             Controls.Add(lblFloor0);
@@ -205,6 +252,7 @@ namespace ElevatorApp
             Controls.Add(btnRequest1);
             Controls.Add(pnlShaft);
             Controls.Add(grpControlPanel);
+            Controls.Add(lblTitle);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             Name = "MainForm";
@@ -235,5 +283,6 @@ namespace ElevatorApp
         private System.Windows.Forms.Label lblFloor1;
         private System.Windows.Forms.Label lblFloor0;
         private System.Windows.Forms.Button btnLog;
+        private System.Windows.Forms.Label lblTitle;
     }
 }
