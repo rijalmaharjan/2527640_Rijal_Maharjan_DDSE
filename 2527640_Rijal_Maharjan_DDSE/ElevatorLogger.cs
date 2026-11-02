@@ -10,11 +10,6 @@ namespace ElevatorApp
         public string Description { get; set; }
     }
 
-    /// <summary>
-    /// The GUI only talks to this interface. Later you can add a
-    /// SqlElevatorLogger (SQL Server/SSMS) and swap it in MainForm
-    /// without touching any other code.
-    /// </summary>
     public interface IElevatorLogger
     {
         void Log(int floor, string description);

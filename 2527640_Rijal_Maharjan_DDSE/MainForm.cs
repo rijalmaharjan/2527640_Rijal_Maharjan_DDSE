@@ -1,4 +1,4 @@
-using System;
+    using System;
 using System.Windows.Forms;
 
 namespace ElevatorApp
@@ -29,7 +29,7 @@ namespace ElevatorApp
             logger.Log(elevator.CurrentFloor, "Elevator system started");
         }
 
-        // ---------- Task 2: button events ----------
+        // ---------- button events ----------
         private void btnRequest1_Click(object sender, EventArgs e)
         {
             PressButton(1, "Request button");
@@ -64,7 +64,7 @@ namespace ElevatorApp
             form.ShowDialog();
         }
 
-        // ---------- Task 4: animation using delegates and the timer ----------
+        // ---------- animation using delegates and the timer ----------
         private void ElevatorPositionChanged(double position)
         {
             pnlCar.Top = Floor0Y - (int)(position * (Floor0Y - Floor1Y));

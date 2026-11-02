@@ -12,15 +12,11 @@ namespace ElevatorApp
         DoorsClosing
     }
 
-    // Delegates used to tell the form what is happening (Task 4)
+    // Delegates used to tell the form what is happening 
     public delegate void PositionChangedHandler(double position);
     public delegate void DoorChangedHandler(double openness);
     public delegate void StatusChangedHandler(string message);
 
-    /// <summary>
-    /// The elevator logic. Position is 0.0 at floor 0 and 1.0 at floor 1.
-    /// Steps: doors close -> move -> arrive -> doors open -> wait -> doors close.
-    /// </summary>
     public class Elevator
     {
         public const int BottomFloor = 0;

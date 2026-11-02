@@ -5,10 +5,6 @@ using System.Runtime.InteropServices;
 
 namespace ElevatorApp
 {
-    /// <summary>
-    /// Saves the elevator log in the Access database.
-    /// The connection string is set in MainForm.cs (same style as Form1.cs).
-    /// </summary>
     public class AccessElevatorLogger : IElevatorLogger
     {
         string connectionString;
@@ -19,7 +15,7 @@ namespace ElevatorApp
         {
             this.connectionString = connectionString;
 
-            // full path of the database file (the connection string path is relative)
+            // full path of the database file 
             OleDbConnectionStringBuilder builder = new OleDbConnectionStringBuilder(connectionString);
             databasePath = Path.GetFullPath(builder.DataSource);
 

@@ -3,7 +3,6 @@ using System.Windows.Forms;
 
 namespace ElevatorApp
 {
-    /// <summary>Displays the elevator's historical operation records.</summary>
     public partial class LogForm : Form
     {
         public LogForm()
